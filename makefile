@@ -1,4 +1,4 @@
-.PHONY: linux
+.PHONY: linux clean
 
 clean:
 	rm -f pypicloud-version-proxy
