@@ -45,6 +45,7 @@ func ProxyRequest(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var versions []string
 	for _, p := range api.Packages {
 		versions = append(versions, p.Version)
 	}
@@ -61,10 +62,9 @@ func ProxyRequest(w http.ResponseWriter, r *http.Request) {
 }
 
 var (
-	bind     string
-	baseurl  string
-	versions []string
-	api      Api
+	bind    string
+	baseurl string
+	api     Api
 )
 
 func init() {
